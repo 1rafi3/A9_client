@@ -1,0 +1,27 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07121F"/>
+      <stop offset="1" stop-color="#132B4F"/>
+    </linearGradient>
+    <linearGradient id="field" x1="220" y1="270" x2="980" y2="660" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#34D399"/>
+      <stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="blueGlow" x1="320" y1="170" x2="900" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" rx="48" fill="url(#bg)"/>
+  <circle cx="180" cy="150" r="190" fill="url(#blueGlow)"/>
+  <path d="M175 600L405 430C440 405 470 392 510 392H880C920 392 950 405 985 430L1055 482C1090 508 1100 556 1077 591L954 739C937 763 911 776 883 776H316C288 776 262 764 245 740L154 638C129 605 137 557 175 600Z" fill="url(#field)"/>
+  <rect x="485" y="472" width="245" height="195" rx="32" fill="none" stroke="#DFF7FF" stroke-width="8" opacity="0.9"/>
+  <circle cx="607" cy="569" r="18" fill="#DFF7FF" opacity="0.95"/>
+  <path d="M307 360C385 236 504 172 640 172C782 172 905 240 979 368" stroke="#DFF7FF" stroke-width="18" stroke-linecap="round" opacity="0.35"/>
+  <path d="M258 386C344 250 490 170 640 170C790 170 937 252 1024 392" stroke="#F8FAFC" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+  <path d="M199 548L270 466L360 531L300 643Z" fill="#032E49" opacity="0.72"/>
+  <path d="M891 466L995 548L952 655L850 576Z" fill="#032E49" opacity="0.72"/>
+  <text x="72" y="110" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="800">Stamford Bridge Arena</text>
+  <text x="72" y="158" fill="#7DD3FC" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600">Premium city arena</text>
+</svg>

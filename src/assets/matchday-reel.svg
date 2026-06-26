@@ -1,0 +1,23 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A0F1A"/>
+      <stop offset="1" stop-color="#1C1236"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(650 390) rotate(90) scale(320 520)">
+      <stop stop-color="#8B5CF6" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" rx="48" fill="url(#bg)"/>
+  <circle cx="940" cy="180" r="180" fill="url(#glow)"/>
+  <rect x="210" y="170" width="780" height="460" rx="34" fill="#0F172A" stroke="#A78BFA" stroke-width="6"/>
+  <path d="M360 300H840L730 430L600 360L500 470L360 300Z" fill="#7C3AED" opacity="0.32"/>
+  <circle cx="414" cy="306" r="28" fill="#EDE9FE" fill-opacity="0.14" stroke="#C4B5FD" stroke-width="4"/>
+  <circle cx="786" cy="306" r="28" fill="#EDE9FE" fill-opacity="0.14" stroke="#C4B5FD" stroke-width="4"/>
+  <path d="M330 514L420 430L520 520L610 410L744 514L842 446" stroke="#C4B5FD" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="600" cy="390" r="44" fill="#C4B5FD" fill-opacity="0.12" stroke="#DDD6FE" stroke-width="6"/>
+  <path d="M586 370L638 390L586 410V370Z" fill="#DDD6FE"/>
+  <text x="90" y="110" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="800">SportNest Highlight Reel</text>
+  <text x="90" y="154" fill="#C4B5FD" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="600">Featured match-day preview</text>
+</svg>

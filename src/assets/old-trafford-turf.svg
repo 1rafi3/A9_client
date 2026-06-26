@@ -1,0 +1,28 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08111F"/>
+      <stop offset="1" stop-color="#0F2740"/>
+    </linearGradient>
+    <linearGradient id="pitch" x1="250" y1="260" x2="950" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22C55E"/>
+      <stop offset="1" stop-color="#0F8A3C"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="300" y1="180" x2="900" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F97316" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#F97316" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" rx="48" fill="url(#bg)"/>
+  <circle cx="980" cy="120" r="180" fill="url(#glow)"/>
+  <path d="M170 610L450 430C485 407 515 393 555 393H860C900 393 930 407 965 430L1030 472C1066 495 1075 545 1050 579L925 740C908 763 882 775 854 775H344C316 775 290 763 273 740L150 584C124 548 133 498 170 610Z" fill="url(#pitch)" opacity="0.95"/>
+  <path d="M254 562L470 424C494 409 521 401 549 401H862C889 401 916 409 940 424L981 449" stroke="#E2FFE7" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+  <rect x="496" y="486" width="210" height="176" rx="30" fill="none" stroke="#E2FFE7" stroke-width="8" opacity="0.9"/>
+  <circle cx="600" cy="574" r="18" fill="#E2FFE7" opacity="0.95"/>
+  <path d="M300 334C360 220 500 168 638 168C783 168 913 224 966 336" stroke="#D1D5DB" stroke-width="18" stroke-linecap="round" opacity="0.55"/>
+  <path d="M264 360C336 236 482 160 640 160C796 160 940 240 1008 362" stroke="#F8FAFC" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+  <path d="M190 580L260 468L365 530L297 642Z" fill="#052E16" opacity="0.7"/>
+  <path d="M900 470L1010 552L970 662L858 584Z" fill="#052E16" opacity="0.7"/>
+  <text x="72" y="110" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="800">Old Trafford Turf</text>
+  <text x="72" y="158" fill="#86EFAC" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600">Historic match-day energy</text>
+</svg>
