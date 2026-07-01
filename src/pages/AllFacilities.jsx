@@ -23,13 +23,12 @@ export default function AllFacilities() {
     const delayDebounce = setTimeout(async () => {
       try {
         setLoading(true);
-        const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
         const queryParams = new URLSearchParams();
         if (search) queryParams.append("search", search);
         if (selectedTypes.length > 0) queryParams.append("type", selectedTypes.join(","));
 
-        const res = await fetch(`${apiUrl}/api/facilities?${queryParams.toString()}`);
+        const res = await fetch(`/api/facilities?${queryParams.toString()}`);
         if (res.ok && !ignore) {
           const data = await res.json();
           setFacilities(data);

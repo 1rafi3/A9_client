@@ -1,16 +1,9 @@
 {
   "installCommand": "npm install --legacy-peer-deps",
-  "build": {
-    "env": {
-      "VITE_API_URL": "https://client-two-omega-46.vercel.app",
-      "VITE_IMGBB_API_KEY": "4b5fc51946d593b466ad17cf41ba0df2",
-      "NEXT_PUBLIC_SERVER_URL": "https://client-two-omega-46.vercel.app"
-    }
-  },
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://server-tawny-sigma.vercel.app/api/$1"
+      "destination": "https://a09server.vercel.app/api/$1"
     },
     {
       "source": "/(.*)",

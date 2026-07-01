@@ -25,8 +25,7 @@ export default function FacilityDetails() {
   useEffect(() => {
     const fetchFacilityDetails = async () => {
       try {
-        const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
-        const res = await fetch(`${apiUrl}/api/facilities/${id}`);
+        const res = await fetch(`/api/facilities/${id}`);
         if (res.ok) {
           const data = await res.json();
           setFacility(data);
@@ -66,8 +65,7 @@ export default function FacilityDetails() {
 
     try {
       setBookingLoading(true);
-      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
-      const res = await fetch(`${apiUrl}/api/bookings`, {
+      const res = await fetch("/api/bookings", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

@@ -53,8 +53,7 @@ export default function ManageMyFacilities() {
 
     const loadFacilities = async () => {
       try {
-        const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
-        const res = await fetch(`${apiUrl}/api/facilities/my-facilities`, {
+        const res = await fetch("/api/facilities/my-facilities", {
           credentials: "include",
         });
 
@@ -89,8 +88,7 @@ export default function ManageMyFacilities() {
     }
 
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
-      const res = await fetch(`${apiUrl}/api/facilities/${facilityId}`, {
+      const res = await fetch(`/api/facilities/${facilityId}`, {
         method: "DELETE",
         credentials: "include",
       });
@@ -140,8 +138,7 @@ export default function ManageMyFacilities() {
 
     try {
       setUpdating(true);
-      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
-      const res = await fetch(`${apiUrl}/api/facilities/${editingFacility._id}`, {
+      const res = await fetch(`/api/facilities/${editingFacility._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"

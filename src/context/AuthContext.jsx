@@ -13,8 +13,7 @@ export function AuthProvider({ children }) {
     setBootstrapping(true);
 
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
-      const res = await fetch(`${apiUrl}/api/auth/jwt`, {
+      const res = await fetch("/api/auth/jwt", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -83,8 +82,7 @@ export function AuthProvider({ children }) {
 
   const logout = async () => {
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
-      await fetch(`${apiUrl}/api/auth/logout`, {
+      await fetch("/api/auth/logout", {
         method: "POST",
         credentials: "include"
       });
@@ -96,11 +94,11 @@ export function AuthProvider({ children }) {
     setUser(null);
   };
 
-  const loginWithGoogle = async () => {
-    // For social login, Better Auth redirects, then comes back to callbackURL
+  const loginWithGoogle = async (callbackURL = `${window.location.origin}/my-bookings`) => {
+    // Social login starts on the frontend, then returns to a frontend route after the OAuth callback completes.
     const { data, error } = await authClient.signIn.social({
       provider: "google",
-      callbackURL: window.location.origin
+      callbackURL,
     });
     if (error) {
       throw new Error(error.message || "Google login failed");

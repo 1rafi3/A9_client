@@ -9,16 +9,30 @@ Currently, two official plugins are available:
 
 ## Client Environment
 
-The app reads the backend base URL from `VITE_API_URL`.
+The app routes API and auth requests through same-origin `/api/*` paths so Vercel can proxy them to the backend.
 
 - Local development can use the built-in fallback of `http://localhost:5000`.
-- For deployment, set `VITE_API_URL` to the live backend origin so auth cookies and API requests target the correct server.
+- `VITE_API_URL` is still used by the image/video helpers to resolve relative media URLs.
+- For deployment, set `VITE_API_URL` to your backend origin if your API returns relative media paths.
+- The image upload flow also requires `VITE_IMGBB_API_KEY`.
 
 Example:
 
 ```bash
 VITE_API_URL=https://your-backend-domain.com
+VITE_IMGBB_API_KEY=your-imgbb-key
 ```
+
+## Vercel Deployment
+
+If you deploy this client on Vercel, set the environment variables in the project settings rather than hardcoding them in `vercel.json`.
+
+Required variables:
+
+- `VITE_API_URL` for media URL resolution
+- `VITE_IMGBB_API_KEY` for image uploads
+
+The app includes an API rewrite so client-side code can call `/api/*` without cross-origin CORS failures, and an SPA rewrite so routes like `/login` and `/facility/:id` keep working on refresh.
 
 ## React Compiler
 

@@ -31,8 +31,7 @@ export default function Home() {
   useEffect(() => {
     const fetchFacilities = async () => {
       try {
-        const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
-        const res = await fetch(`${apiUrl}/api/facilities`);
+        const res = await fetch("/api/facilities");
         if (res.ok) {
           const data = await res.json();
           setFacilities(data);

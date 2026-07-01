@@ -16,8 +16,7 @@ export default function MyBookings() {
 
     const loadBookings = async () => {
       try {
-        const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
-        const res = await fetch(`${apiUrl}/api/bookings/my-bookings`, {
+        const res = await fetch("/api/bookings/my-bookings", {
           credentials: "include",
         });
 
@@ -55,8 +54,7 @@ export default function MyBookings() {
 
     // Second click: proceed with cancellation
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
-      const res = await fetch(`${apiUrl}/api/bookings/${bookingId}`, {
+      const res = await fetch(`/api/bookings/${bookingId}`, {
         method: "DELETE",
         credentials: "include",
       });

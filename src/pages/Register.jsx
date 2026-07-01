@@ -50,7 +50,7 @@ export default function Register() {
 
   const handleGoogleLogin = async () => {
     try {
-      await loginWithGoogle();
+      await loginWithGoogle(`${window.location.origin}/my-bookings`);
     } catch (error) {
       console.error("Google login error:", error);
       toast.error(error.message || "Google login failed");
