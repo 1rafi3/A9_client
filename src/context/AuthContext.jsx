@@ -96,9 +96,12 @@ export function AuthProvider({ children }) {
 
   const loginWithGoogle = async (callbackURL = `${window.location.origin}/my-bookings`) => {
     // Social login starts on the frontend, then returns to a frontend route after the OAuth callback completes.
+    const origin = window.location.origin;
     const { data, error } = await authClient.signIn.social({
       provider: "google",
       callbackURL,
+      newUserCallbackURL: `${origin}/my-bookings`,
+      errorCallbackURL: `${origin}/login`,
     });
     if (error) {
       throw new Error(error.message || "Google login failed");
